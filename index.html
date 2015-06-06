@@ -1,191 +1,63 @@
-
-<!doctype html>
-
-<html lang="en">
+<!DOCTYPE html>  
 <head>
-	<meta charset="utf-8">
-	<title>GIF.business</title>
-	<meta name="description" content="San Francisco based creative agency animating life.">
-	<meta name="author" content="gif.business">
-
-	<link rel="stylesheet" href="css/style.css">
-	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-	<link rel="icon" type="image/png" href="./img/logo_gifbusiness.png">
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-</head>
-
-<body style="">
-
-  	<script>
-  		$(document).ready(function(){
-
-  			// select a coverId. i.e. which gif to display on the cover and attach src to the DOM
-  			var coverId = Math.floor(Math.random(1)*5);
-	  		$('#coverImg').attr('src', 'img/cover'+coverId+'.gif');
-	  		$('#cover').show();
-
-	  		// scroll 100% down the page when you click the down arrow
-	  		$('#scrollDown').click(function() {
-	  			var height = $(window).height();
-	  			window.scrollTo(0, height);
-	  		});
-
-	  		var curProject;
-	  		$('.project').click(function() {
-	  			
-	  			if (!curProject) {
-		  			// retrieve the current project
-		  			curProject = $(this).attr('id');
-		  			
-		  			// trigger the background transparency and adapt sizing to the document
-		  			$('.layer').show().height($(document).height());
-
-		  			// set the selected project id for the CSS to grab
-		  			$(this).addClass('selectedProject');
-
-		  			// show the project details
-		  			//$(this).find('.projectDescription').show();
-		  			$('#'+curProject+"description").show();
-		  			//$(this).append("<div id='selectedProjectT'>"+curProject.text+"</div>")
-	  			}
-
-	  		});
-
-	  		$('.layer').click(function() {
-	  			$('.layer').hide();
-
-  				$('#'+curProject).removeClass('selectedProject');
-  				$('.projectDescription').hide();
-  				//$('#selectedProjectT').remove();
-
-  				// clear the curProject
-  				curProject = null;
-	  		});
-
-  		});
-  	</script>
-
-  	<div class="layer"></div>
-
-
-	  	<div id="cover" style="position: relative; width: 100%; height: 100%;">
-	  		<img id="coverImg" style="width: 100%; height: 100%;">
-		  	<div class="primary" style="position: absolute; top: 42%; right: 59%; color: white; background-color: black; padding: 2% 3% 2% 3%; font-size: 4.0vw; margin: 0;"/>GIF.</div>
-			<div style="position: absolute; top: 42%; left: 44%; width: 46%; color: white; background-color: black; padding: 2% 3% 2% 3%; font-size: 3.0vw; line-height: 180%;"/>We create interactive experiences and products that animate life.
-			</div>
-			<img id="scrollDown" src='img/icon-arrow-down-b-128.png' style="position: absolute; top: 93%; left: 48%; width: 4%; cursor: pointer;" />
-	  	</div>
-
-
-		<div id="container" style="width: 100%;">
-
-		  	<div id="projects" style="width: 100%; position: absolute; top: 100%;">
-
-		  		<center class="grayFont primary" style="font-weight: 500; font-size: 2.0vw; padding-top: 10px;">WE CAN DO ANYTHING, BUT HERE ARE SOME THINGS WE'VE DONE</center>
-
-
-		  		<div id="booth" class="project" style="position: relative; float: left; width: 28%;">
-		  			<img class="projectImg" src="img/project_booth.gif" style="width: 100%;">
-		  			<div style="position: absolute; bottom: 8%; left: 8%; background-color: black; color: white; padding: 1.5%;">
-		  				BOOTH
-		  			</div>
-		  		</div>
-		  		<div id="boothdescription" class="projectDescription" style="position: absolute; top: 2%; left: 25%; width: 300px;">
-		  			We make photo booths, gif booths and video booths, with on-site printing, email-to-self  and upload capabilities.  Custom is our speciality. 
-		  		</div>
-		  		
-
-		  		<div id="levitate" class="project" style="position: relative; float: right; width: 66%;">
-		  			<img class="projectImg" src="img/project_levitate.gif" style="width: 100%;">
-		  			<div style="position: absolute; bottom: 8%; left: 5%; background-color: black; color: white; padding: 1.5%;">
-		  				LEVITATION
-		  			</div>
-		  		</div>
-		  		<div id="levitatedescription" class="projectDescription" style="position: absolute; top: 5%; right: 60%; width: 250px;">
-		  			We created this unique Levitation booth for Instagram at SXSW 2015 - which automatically generates a photo of you floating in space.
-		  		</div>
-
-
-		  		<div id="spaceselfie" class="project" style="position: relative; float: left; width: 28%;">
-		  			<img class="projectImg" src="img/project_spaceselfie.gif" style="width: 100%;">
-		  			<div style="position: absolute; bottom: 10%; left: 10%; background-color: black; color: white; padding: 1.5%;">
-		  				SPACE SELFIE
-		  			</div>
-		  		</div>
-		  		<div id="spaceselfiedescription" class="projectDescription" style="position: absolute; top: 29%; left: 15%; width: 200px;">
-		  			Come to our roof for a selfie. We'll reposition our satellite and take your picture from outer space.
-		  		</div>
-
-		  		<div id="handcrank" class="project" style="position: relative; float: left; width: 28%;">
-		  			<img class="projectImg" src="img/project_handcrank.gif" style="width: 100%;">
-		  			<div style="position: absolute; bottom: 13%; left: 9%; background-color: black; color: white; padding: 1.5%;">
-		  				HANDCRANK
-		  			</div>
-		  		</div>
-		  		<div id="handcrankdescription" class="projectDescription" style="position: absolute; top: 32%; left: 55%; width: 200px;">
-		  			Play back videos by hand, Frame-by-Frame, forwards or backwards.  Originally built for Vine - works with any video or gif files.  Borrow just 1, or get 20 of them for a big installation. 
-		  		</div>
-
-		  		<div id="dblcam" class="project" style="position: relative; float: right; width: 35%;">
-		  			<img class="projectImg" src="img/project_dblcam.jpg" style="width: 100%;">
-		  			<div style="position: absolute; bottom: 15%; left: 8%; background-color: black; color: white; padding: 1.5%;">
-		  				DBLCAM
-		  			</div>
-		  		</div>
-		  		<div id="dblcamdescription" class="projectDescription" style="position: absolute; bottom: 55%; right: 25%; width: 200px;">
-		  			Our team made this fun iOS app which takes a photo from the front and rear cameras on your iPhone simultaneously, giving you a diptych to share. 
-		  		</div>
-
-		  		<div id="robot" class="project" style="position: relative; float: right; width: 35%;">
-		  			<img class="projectImg" src="img/project_robot.gif" style="width: 100%;">
-		  			<div style="position: absolute; bottom: 9%; left: 8%; background-color: black; color: white; padding: 1.5%;">
-		  				WHATEVER
-		  			</div>
-		  		</div>
-		  		<div id="robotdescription" class="projectDescription" style="position: absolute; bottom: 35%; right: 27%; width: 200px;">
-		  			We have ideas. Our team is made up of programmers, designers, photographers and artists and if the technology exists, we can build it. 
-		  		</div>
-
-		  		<div id="visualization" class="project" style="position: relative; float: left; width: 59%;">
-		  			<img class="projectImg" src="img/project_visualization.gif" style="width: 100%;">
-		  			<div style="position: absolute; bottom: 10%; left: 5%; background-color: black; color: white;">
-		  				VISUALIZATION
-		  			</div>
-		  		</div>
-		  		<div id="visualizationdescription" class="projectDescription" style="position: absolute; bottom: 36%; left: 50%; width: 200px;">
-		  			Interactive visualizations of photos, tweets, hashtagged content and anything else. All built on top of our own powerful social media aggregator tool. We can produce for any screen, any size, any concept.
-		  		</div>
-
-		  		<div id="footer" style="position: relative; float: left; width: 100%; background-color: black; color: white; min-height: 120px;">
-		  			<div class="primary" style="position: absolute; top: 30%; left: 15%; width: 10%; font-size: 4.0vw;">
-		  				GIF.
-			  		</div>
-			  		<div style="position: absolute; top: 30%; left: 25%; font-size: 1.9vw; max-width: 50%;">
-			  			We Animate Life </br>
-			  			275 8th Street, San Francisco
-			  		</div>
-			  		<div style="position: absolute; top: 20%; right: 25%;">
-			  			<div style="float:right; margin-top: 5px; margin-left: 10px; font-size: 2.0vw;">
-			  				hello@gif.business
-			  			</div>
-			  			</br>
-				  		<div style="float: right;">
-				  			<a href="https://twitter.com/gifbusiness">
-				  				<img src="img/glyph_twitter_white.png" height="30"/>
-				  			</a>
-				  			<a href="https://instagram.com/gif.business">
-				  				<img src="img/glyph_instagram_white.png" height="30"/>
-				  			</a>
-			  			</div>
-			  			
-			  		</div>
-			  	</div>
-
-		  	</div>
-
-	</div>
-
-</body>
-</html>
+	<meta charset="utf-8">		
+	<title>Have a Nice Day</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>   		
+ 	<link rel="stylesheet" href="/style.css" />
+ 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/?feed" />
+ 	<link rel="Shortcut Icon" href="favico.ico" />
+	<script type='text/javascript' src='/js/jquery-1.7.1.min.js'></script>
+    <script type='text/javascript' src="/js/jquery.infinitescroll.min.js"></script>	
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#content').infinitescroll({
+                navSelector: '#pageLinks',
+                nextSelector: '#page_next',
+                itemSelector: 'figure',
+                loadingImg: '',
+                loadingText: 'Wait a Second',
+                debug: false,
+                errorCallback: function() {
+                    // fade out the error message after 2 seconds
+                    $('#infscr-loading').animate({opacity: .8}, 1000).fadeOut('normal');
+                }
+            });
+        });
+    </script>
+    
+	<body class="desktop">
+	 
+	    <div id="menu">
+	    	<ul>
+	            <li class="moblo"><a href="/">Reform</a></li>
+	            <li class="hide"><a href="https://www.facebook.com/reformlt" target="_blank">Facebook</a></li>
+	    		<li class="hide"><a href="mailto:reformhello@gmail.com">Contact</a></li>
+	    		<li class="hide"><a href="/r/">Links</a></li>
+	    	</ul>
+	    </div>	
+	        
+	    <div id="content" role="main">
+	        	        	        <figure><a href="http://shindokho.kr/6978814" class="link" target="_blank"><img src="/data/images/2015/01/k1-900.jpg" width="723" height="512" /></a></figure>
+	        	        	        <figure><a href="http://viciouslycyd.tumblr.com/image/81962998151" class="link" target="_blank"><img src="/data/images/2015/01/tumblr-n3n8ith54p1r09f27o1-1280.jpg" width="600" height="399" /></a></figure>
+	        	        	        <figure><a href="http://erichu.info/" class="link" target="_blank"><img src="/data/images/2015/01/03.jpg" width="600" height="455" /></a></figure>
+	        	        	        <figure><a href="http://dickochan.tumblr.com/image/99031747505" class="link" target="_blank"><img src="/data/images/2014/12/tumblr-ncuqgyoewk1qci4n3o1-1280.jpg" width="600" height="400" /></a></figure>
+	        	        	        <figure><a href="http://barisbeverhausen.tumblr.com/image/60151525635" class="link" target="_blank"><img src="/data/images/2014/12/tumblr-msi2j3mg2e1rnhtgzo1-1280.jpg" width="600" height="774" /></a></figure>
+	        	        	        <figure><a href="http://123layout.tumblr.com/post/103480139881" class="link" target="_blank"><img src="/data/images/2014/11/tumblr-nfk6hahhng1smsuzto1-1280.jpg" width="600" height="400" /></a></figure>
+	        	        	        <figure><a href="http://ifeltblank.tumblr.com/post/102873909203" class="link" target="_blank"><img src="/data/images/2014/11/tumblr-nf6rtutxum1rq18dno1-1280.jpg" width="600" height="450" /></a></figure>
+	        	        	        <figure><a href="http://turtleswithwings.tumblr.com/post/22290235460" class="link" target="_blank"><img src="/data/images/2014/11/tumblr-m3f8r5xsai1qhefv8o1-500.png" width="500" height="329" /></a></figure>
+	        	        	        <figure><a href="http://www.antjepeters.com/index.php?/applied-work/series/" class="link" target="_blank"><img src="/data/images/2014/11/121-thegarden01web.jpg" width="397" height="505" /></a></figure>
+	        	        	        <figure><a href="http://erichu.info/" class="link" target="_blank"><img src="/data/images/2014/10/01.jpg" width="600" height="360" /></a></figure>
+	        	        	        <figure><a href="http://evaoleary.com/cq06grcztmiau87oycwpfu0892jxah" class="link" target="_blank"><img src="/data/images/2014/10/michelle-edit-4-copy.jpg-format-1000w.jpg" width="600" height="480" /></a></figure>
+	        	        	        <figure><a href="http://puretypography.tumblr.com/image/100241493688" class="link" target="_blank"><img src="/data/images/2014/10/tumblr-ndjjj5yhhx1s4ua7ho1-1280.jpg" width="600" height="420" /></a></figure>
+	        	        	        <figure><a href="http://oraclefox.com/2014/06/16/vogue-netherlands-fashion-magazine-july-2014-aline-weber/" class="link" target="_blank"><img src="/data/images/2014/10/vogue-netherlands-july-2014-aline-weber-oracle-fox.3.jpg" width="600" height="777" /></a></figure>
+	        	        	        <figure><a href="http://nimuradaisuke.tumblr.com/image/56687501206" class="link" target="_blank"><img src="/data/images/2014/10/tumblr-mqndi3djkx1sczrxso1-1280.jpg" width="600" height="847" /></a></figure>
+	        	        	        <figure><a href="http://nameloss.tumblr.com/" class="link" target="_blank"><img src="/data/images/2014/10/tumblr-nd9cqhkdnu1qa47z6o1-1280.jpg" width="600" height="420" /></a></figure>
+	        	    </div>
+	        
+	    <div id="pageLinks">
+	        	        	        	         <a id="page_next" href="/?page/2"></a>
+	        	    </div>
+    
+    </body>   
+    
+</html>	
