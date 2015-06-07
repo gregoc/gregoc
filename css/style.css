@@ -1,7 +1,6 @@
 /* ~ ~ ~ ~ ~ ~ TYPO ~ ~ ~ ~ ~ ~ */
 @font-face {
-    font-family: 'r';
-    src: url('/fonts/r.woff');
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* ~ ~ ~ ~ ~ ~ BASIC ~ ~ ~ ~ ~ ~ */
@@ -84,7 +83,7 @@ html,body {
 }
 
 body {
-	font-family: 'r', georgia, serif;
+	font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.6em;
     background-color: white;
 	color: black;
