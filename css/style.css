@@ -181,7 +181,7 @@ p {
     padding-right: 50px;
     position: relative;
     display: inline-block;
-    text-align: justify;
+    text-align: left;
     vertical-align: top;
     font-family: 'Josefin Slab', serif;
     font-size: .90em;
