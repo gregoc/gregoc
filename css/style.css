@@ -143,7 +143,7 @@ figure {
     display: block;
 }
 #menu li {
-    margin-bottom: 0.1em;
+    margin-bottom: 0.21em;
 }
 .hide {
    display: none;
@@ -181,7 +181,7 @@ p {
     padding-right: 50px;
     position: relative;
     display: inline-block;
-    text-align: center;
+    text-align: left;
     vertical-align: top;
     font-family: 'Josefin Slab', serif;
     font-size: .90em;

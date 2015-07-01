@@ -6,7 +6,7 @@
  	<link rel="stylesheet" href="css/style.css">
  	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600' rel='stylesheet' type='text/css'>
  	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/?feed" />
- 	<link rel="icon" type="image/png" href="img/wave.png" sizes="32x32">
+ 	<link rel="icon" type="image/png" href="img/cloud.png" sizes="32x32">
 	<script type='text/javascript' src='js/jquery-1.7.1.min.js'></script>
     <script type='text/javascript' src="js/jquery.infinitescroll.min.js"></script>	
     <script type="text/javascript">
@@ -16,7 +16,9 @@
                 nextSelector: '#page_next',
                 itemSelector: 'figure',
                 loadingImg: '',
-                loadingText: 'coming up',
+                loadingText: 'COMING UP',
+                donetext     : 'THATS ALL',
+                bufferPx     : 30,
                 debug: false,
                 errorCallback: function() {
                     // fade out the error message after 2 seconds
@@ -30,19 +32,26 @@
 	 
 	    <div id="menu">
 	    	<ul>
-	            <li class="moblo"><a href="/">greg oc</a></li>
+	            <li class="moblo"><a href="about">greg oc</a></li>
 	            <li class="hide"><a href="http://www.gjocphotography.com/" target="_blank">portfolio</a></li>
 	    		<li class="hide"><a href="contact">contact</a></li>
+	    		<li class="hide"><a href="/">top</a></li>
 	    	</ul>
-	    </div>
-
-	    </body>  
+	    </div>	
 	        
-		<div id="content" role="main">
-	        	        	        <figure>
-	        	        	        	<p>click to download</p>
-	        	        	        	<a href="image/gregoc.pdf" class="link" target="_blank"><img src="img/gregoc.png" width="632" height="878" /></a></figure>
-	    </div>   
+	    <div id="content" role="main">
+	        	        	       	<figure>
+	        	        	        	<a href="" class="link" target="_blank"><img src="img/thejerk.jpg" width="700" height="457" /></a>
+	        	        	        </figure>
+
+	        	        	       
+	        	  </div>
+
+	        	  <br>  
+	    <div id="pageLinks">
+	        	        	        	         <a id="page_next" href="4"></a>
+	        	    </div>
     
+    </body>   
     
 </html>	
