@@ -175,10 +175,10 @@ figure {
 }
 
 p {
-    max-width: 100% !important;
+    max-width: 800px;
     padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 35px;
+    padding-right: 35px;
     position: relative;
     display: inline-block;
     text-align: left;
