@@ -1,0 +1,109 @@
+<!DOCTYPE html>  
+<head>
+	<meta charset="utf-8">		
+	<title>gregOC</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>   		
+ 	<link rel="stylesheet" href="css/projects.css">
+ 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600' rel='stylesheet' type='text/css'>
+ 	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+ 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/?feed" />
+ 	<link rel="icon" type="image/png" href="img/cloud.png" sizes="32x32">
+	<script type='text/javascript' src='js/jquery-1.7.1.min.js'></script>
+    <script type='text/javascript' src="js/jquery.infinitescroll.min.js"></script>	
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#content').infinitescroll({
+                navSelector: '#pageLinks',
+                nextSelector: '#page_next',
+                itemSelector: 'figure',
+                loadingImg: '',
+                loadingText: 'COMING UP',
+                donetext     : 'THATS ALL' ,
+                bufferPx     : 30,
+                debug: false,
+                errorCallback: function() {
+                    // fade out the error message after 2 seconds
+                    $('#infscr-loading').animate({opacity: .8}, 1000).fadeOut('normal');
+                }
+            });
+        });
+    </script>
+    
+	<body class="desktop">
+	 
+	    <div id="menu">
+	    	<ul>
+	            <li class="moblo"><a href="contact">greg oc</a></li>
+	            <li class="hide"><a href="http://www.gjocphotography.com/" target="_blank">portfolio</a></li>
+	    		<li class="hide"><a href="projects">projects</a></li>
+	    		<li class="hide"><a href="contact">contact</a></li>
+	    		<li class="hide"><a href="#">top</a></li>
+	    	</ul>
+	    </div>	
+	        
+	    <div id="content" role="main">
+
+	    								<p>
+	        	        	        	<font="center">past projects</font>
+										</p>
+										<br>
+	        	        	        <figure>
+	        	        	        	<iframe src="https://player.vimeo.com/video/90166584" width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	        	        	        </figure>
+	        	        	     <p>
+	        	        	        	<font="center"><span id="space">space selfie</span></font>
+										<br>
+										this serves a basic timelime of projects and directives I have achived<br>
+										this was is made to display the projects i am working on, the images i am continually collecting and items that i find interesting. most of the images & .gifs i have captured & created. occasionally i’ll upload my celebrity crushes; Hemingway, Sagan, Patti Smith etc. you can find my full photography portfolio and contact info in the upper left.
+								</p>
+										<br>
+										<br>
+	        	        	       	
+	        	        	       	<figure>
+	        	        	        	<iframe src="https://player.vimeo.com/video/76176598" width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	        	        	        </figure>
+	        	        	        <p>
+	        	        	        	<font="center"><span id="space">facebook highline</span></font>
+										<br>
+										while working with social print studio i would photograph and video record participants for ad-week.
+								</p>
+										<br>
+										<br>
+	        	        	        <figure>
+	        	        	        <img src="img/googleio.jpg" width="700" height="369" /></a></figure>
+	        	        	        <p>
+	        	        	        	<font="center"><span id="space">sticker printing</span></font>
+										<br>
+										while working with social print studio i would photograph and video record participants for ad-week.
+								</p>
+										<br>
+										<br>
+											<figure>
+	        	        	        	<iframe src="https://player.vimeo.com/video/86545460" width="600" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	        	        	        </figure>
+	        	        	        <p>
+	        	        	        	<font="center"><span id="space">smoke face</span></font>
+										<br>
+										while working with social print studio i would photograph and video record participants for ad-week.
+								</p>
+										<br>
+										<br>
+									<figure>
+	        	        	        <img src="img/earlyframe.jpg" width="700" height="369" /></a></figure>
+	        	        	        <figure>
+	        	        	        <p>
+	        	        	        	<font="center"><span id="space">framing</span></font>
+										<br>
+										while working with social print studio i would photograph and video record participants for ad-week.
+								</p>
+	        	        	
+	        	  </div>
+
+	        	  <br>  
+	    <div id="pageLinks">
+	        	        	        	         <a id="page_next" href="2"></a>
+	        	    </div>
+    
+    </body>   
+    
+</html>	
