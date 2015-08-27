@@ -112,7 +112,9 @@ a {
    
 }
 
-#space  {line-height: 2.5em;
+#space  {
+    line-height: 2.5em;
+    font-weight: bold;
    
 }
 
