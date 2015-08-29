@@ -114,8 +114,14 @@ a {
 
 #space  {
     line-height: 2.5em;
-    font-weight: bold;
+    font-weight: 700;
    
+}
+
+#blue  {
+    line-height: 1.5em;
+    font-weight: 500;
+    color: #0000ff;
 }
 
 figure {
@@ -190,20 +196,23 @@ iframe {
 }
 
 p {
+    
     max-width: 765px;
-    padding-top: 0px;
-    padding-bottom: 25px;
+    padding-top: 50px;
     padding-left: 35px;
     padding-right: 35px;
     position: relative;
     display: inline-block;
-    text-align: left;
+    text-align: justify;  
+    -moz-text-align-last: right; /* Code for Firefox */
+    text-align-last: right;
     vertical-align: top;
     font-family: 'Josefin Slab', serif;
     font-size: .90em;
     background-color: white;
-    color: #676767;
+    color: #5a5a5a;
     letter-spacing: 0.04em;
+    line-height: 1.2em;
     -webkit-font-smoothing: antialiased;
 }
 
