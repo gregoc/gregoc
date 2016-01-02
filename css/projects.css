@@ -204,8 +204,8 @@ p {
     position: relative;
     display: inline-block;
     text-align: left;  
-    -moz-text-align-last: right; /* Code for Firefox */
-    text-align-last: right;
+    -moz-text-align-last: left; /* Code for Firefox */
+    text-align-last: left;
     vertical-align: top;
     font-family: 'Josefin Slab', serif;
     font-size: .90em;
